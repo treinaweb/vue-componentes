@@ -1,3 +1,8 @@
+<script setup>
+import Titulo from './components/Titulo.vue';
+</script>
+
 <template>
-    <h1>TreinaWeb</h1>
+    <Titulo/>
+
 </template>
