@@ -3,6 +3,10 @@ import Titulo from './components/Titulo.vue';
 </script>
 
 <template>
-    <Titulo/>
+    <Titulo texto="Treinaweb"/>
+
+    <Titulo texto="Teste 2"/>
+
+    <Titulo texto="teste de título 3"/>
 
 </template>

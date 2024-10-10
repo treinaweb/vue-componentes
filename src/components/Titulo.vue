@@ -1,10 +1,16 @@
+<script setup>
+const props = defineProps({
+    texto: String,
+});
+</script>
+
 <template>
-    <h1>TreinaWeb</h1>
+    <h1>{{ texto }}</h1>
 </template>
 
 <style scoped>
 h1 {
-    color: red;
+    color: green;
     font-weight: bolder;
     font-size: 3rem;
 }
