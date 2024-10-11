@@ -1,6 +1,7 @@
 <script setup>
 import Titulo from "./components/Titulo.vue";
 import CardProfessores from "./components/CardProfessores.vue";
+import CardUsuario from "./components/CardUsuario.vue";
 
 const professores = [
     {
@@ -25,17 +26,27 @@ const professores = [
 </script>
 
 <template>
-    <Titulo texto="Professores" />
+    <main>
+        <Titulo texto="Professores" />
+        <div class="card-container">
+            <CardProfessores
+                v-for="professor in professores"
+                :key="professor.id"
+                :nome="professor.nome"
+                :avatar="professor.avatar"
+                :linguagem="professor.linguagem"
+            />
+        </div>
+        <Titulo texto="Conhecendo os slots" />
+        <CardUsuario>
+            <p>Nome do Usuário</p>
+        </CardUsuario>
 
-    <div class="card-container">
-        <CardProfessores
-            v-for="professor in professores"
-            :key="professor.id"
-            :nome="professor.nome"
-            :avatar="professor.avatar"
-            :linguagem="professor.linguagem"
-        />
-    </div>
+        <CardUsuario>
+            <p>Nome do Usuário 2</p>
+            <a href="">google</a>
+        </CardUsuario>
+    </main>
 </template>
 
 <style scoped>
@@ -43,5 +54,9 @@ const professores = [
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+main {
+    margin-bottom: 500px;
 }
 </style>
