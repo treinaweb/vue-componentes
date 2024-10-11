@@ -1,6 +1,27 @@
 <script setup>
 import Titulo from "./components/Titulo.vue";
 import CardProfessores from "./components/CardProfessores.vue";
+
+const professores = [
+    {
+        id: 1,
+        nome: "Elton",
+        avatar: "https://github.com/elton-fonseca.png",
+        linguagem: "PHP",
+    },
+    {
+        id: 2,
+        nome: "Amauri",
+        avatar: "https://www.github.com/AmauriBlanco.png",
+        linguagem: "JavaScript",
+    },
+    {
+        id: 3,
+        nome: "Cleyson",
+        avatar: "https://github.com/CleysonPH.png",
+        linguagem: "Python",
+    },
+];
 </script>
 
 <template>
@@ -8,19 +29,11 @@ import CardProfessores from "./components/CardProfessores.vue";
 
     <div class="card-container">
         <CardProfessores
-            nome="Elton"
-            avatar="https://github.com/elton-fonseca.png"
-            linguagem="PHP"
-        />
-        <CardProfessores
-            nome="Amauri"
-            avatar="https://www.github.com/AmauriBlanco.png"
-            linguagem="JavaScript"
-        />
-        <CardProfessores
-            nome="Cleyson"
-            avatar="https://github.com/CleysonPH.png"
-            linguagem="Python"
+            v-for="professor in professores"
+            :key="professor.id"
+            :nome="professor.nome"
+            :avatar="professor.avatar"
+            :linguagem="professor.linguagem"
         />
     </div>
 </template>
