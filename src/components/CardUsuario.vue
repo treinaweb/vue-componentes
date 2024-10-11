@@ -1,6 +1,11 @@
 <template>
     <div class="card-usuario">
-        <slot />
+        <slot name="nome">
+            <h3>Nome não encontrado</h3>
+        </slot>
+        <slot name="link">
+            <a href="#">link não encontrado</a>
+        </slot>
     </div>
 </template>
 

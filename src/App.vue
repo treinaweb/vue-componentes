@@ -39,12 +39,21 @@ const professores = [
         </div>
         <Titulo texto="Conhecendo os slots" />
         <CardUsuario>
-            <p>Nome do Usuário</p>
+            <template #nome>
+                <h3>Amauri</h3>
+            </template>
+            <template #link>
+                <a href="#">Meu link</a>
+            </template>
         </CardUsuario>
 
         <CardUsuario>
-            <p>Nome do Usuário 2</p>
-            <a href="">google</a>
+            <template #nome>
+                <h3>Segundo Nome</h3>
+            </template>
+            <template #link>
+                <a href="#">tenho link</a>
+            </template>
         </CardUsuario>
     </main>
 </template>
