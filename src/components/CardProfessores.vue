@@ -1,4 +1,6 @@
 <script setup>
+import Avatar from "./Avatar.vue";
+
 const props = defineProps({
     nome: String,
     avatar: String,
@@ -8,7 +10,7 @@ const props = defineProps({
 
 <template>
     <div class="card">
-        <img :src="avatar" :alt="none" width="150px" />
+        <Avatar :urlImg="avatar" />
         <h3>{{ nome }}</h3>
         <p>Linguagem: {{ linguagem }}</p>
     </div>
@@ -21,11 +23,6 @@ const props = defineProps({
     border-radius: 10px;
     max-width: 200px;
     text-align: center;
-}
-
-img {
-    border-radius: 50%;
-    border: solid 3px green;
 }
 
 h3 {
