@@ -1,7 +1,7 @@
 <script setup>
-import Titulo from "./components/Titulo.vue";
-import CardProfessores from "./components/CardProfessores.vue";
-import CardUsuario from "./components/CardUsuario.vue";
+import Titulo from "./components/Global/Titulo.vue";
+import CardProfessores from "./components/Card/CardProfessores.vue";
+import CardUsuario from "./components/Card/CardUsuario.vue";
 
 const professores = [
     {
