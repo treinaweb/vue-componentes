@@ -2,6 +2,8 @@
 import Titulo from "./components/Global/Titulo.vue";
 import CardProfessores from "./components/Card/CardProfessores.vue";
 import CardUsuario from "./components/Card/CardUsuario.vue";
+import FormularioInput from "./components/Global/FormularioInput.vue";
+import { ref } from "vue";
 
 const professores = [
     {
@@ -23,6 +25,12 @@ const professores = [
         linguagem: "Python",
     },
 ];
+
+const mensagem = ref("");
+
+function enviarMensagem(novaMensagem) {
+    mensagem.value = novaMensagem;
+}
 </script>
 
 <template>
@@ -55,6 +63,11 @@ const professores = [
                 <a href="#">tenho link</a>
             </template>
         </CardUsuario>
+        <div>
+            <Titulo texto="Conhecendo os Emits" />
+            <FormularioInput @enviar="enviarMensagem" />
+            <p>Valor digitado foi: {{ mensagem }}</p>
+        </div>
     </main>
 </template>
 
