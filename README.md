@@ -21,3 +21,6 @@ Aula 1 | 7 | 1-7 Conhecendo os slots | [Download](https://github.com/treinaweb/v
 Aula 1 | 8 | 1-8 Nomeando os slots | [Download](https://github.com/treinaweb/vue-componentes/archive/31bf08e3e95ddae42717edbad256f5a9889c5aa2.zip)
 Aula 1 | 9 | 1-9 Separando estrutura em compnente menor | [Download](https://github.com/treinaweb/vue-componentes/archive/f090060a0d42556af8d046aca7fb99cd168f754f.zip)
 Aula 1 | 10 | 1-10 Organização de pastas | [Download](https://github.com/treinaweb/vue-componentes/archive/352f25c32757805708485ee478b5a959384d893c.zip)
+Aula 1 | 11 | 1-11 Conhecendo os emits | [Download](https://github.com/treinaweb/vue-componentes/archive/d75fbaaefc0257549a854e3ca967131280c2b7c8.zip)
+Aula 1 | 12 | Provide e inject | [Download](https://github.com/treinaweb/vue-componentes/archive/b3a7eecfdddee664ff2b512a411467269b9d61cb.zip)
+Aula 1 | 13 | 1-13 Utilizando o provide de forma reativa | [Download](https://github.com/treinaweb/vue-componentes/archive/dd9a6b65f7479c05100250261a44a26706613354.zip)
