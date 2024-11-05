@@ -34,8 +34,12 @@ function enviarMensagem(novaMensagem) {
     mensagem.value = novaMensagem;
 }
 
-const texto = "Essa mensagem está vindo do App.vue";
-provide("textoCompartilhado", texto)
+const texto = ref("Essa mensagem está vindo do App.vue");
+provide("textoCompartilhado", texto);
+
+function trocarTexto() {
+    texto.value = "Novo valor na variável Texto";
+}
 </script>
 
 <template>
@@ -76,7 +80,8 @@ provide("textoCompartilhado", texto)
 
         <div>
             <Titulo texto="Conhecendo Providers e Inject" />
-            <BlocoTexto/>
+            <BlocoTexto />
+            <button @click="trocarTexto">Trocar valor</button>
         </div>
     </main>
 </template>
