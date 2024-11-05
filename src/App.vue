@@ -3,7 +3,9 @@ import Titulo from "./components/Global/Titulo.vue";
 import CardProfessores from "./components/Card/CardProfessores.vue";
 import CardUsuario from "./components/Card/CardUsuario.vue";
 import FormularioInput from "./components/Global/FormularioInput.vue";
-import { ref } from "vue";
+import BlocoTexto from "./components/Global/BlocoTexto.vue";
+
+import { provide, ref } from "vue";
 
 const professores = [
     {
@@ -31,6 +33,9 @@ const mensagem = ref("");
 function enviarMensagem(novaMensagem) {
     mensagem.value = novaMensagem;
 }
+
+const texto = "Essa mensagem está vindo do App.vue";
+provide("textoCompartilhado", texto)
 </script>
 
 <template>
@@ -68,6 +73,11 @@ function enviarMensagem(novaMensagem) {
             <FormularioInput @enviar="enviarMensagem" />
             <p>Valor digitado foi: {{ mensagem }}</p>
         </div>
+
+        <div>
+            <Titulo texto="Conhecendo Providers e Inject" />
+            <BlocoTexto/>
+        </div>
     </main>
 </template>
 
@@ -80,5 +90,9 @@ function enviarMensagem(novaMensagem) {
 
 main {
     margin-bottom: 500px;
+}
+
+h1 {
+    margin-top: 13rem;
 }
 </style>
